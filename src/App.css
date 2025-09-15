@@ -1,0 +1,449 @@
+/* Import classic, romantic fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+body {
+  margin: 0;
+  /* Use Lora as the base font for a classic, readable feel */
+  font-family: 'Lora', serif;
+  color: #f5e9d3; /* A soft, creamy off-white for text */
+  overflow: hidden;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* --- NEW: CLASSIC ROMANTIC GRADIENT --- */
+  /* A deep, dark gradient of wine-red and black */
+  background: linear-gradient(135deg, #2B0516, #4E0D2C, #000000);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+
+  position: relative;
+  z-index: 1;
+}
+
+/* Darken the overlay slightly for a moodier feel */
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+/* --- GOLDEN SHIMMERING STARS EFFECT --- */
+.shimmer-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.shimmer-effect span {
+  position: absolute;
+  /* Make the shimmer a soft gold color */
+  background: rgba(255, 215, 0, 0.6);
+  border-radius: 50%;
+  opacity: 0;
+  animation: shimmer 10s infinite ease-out;
+}
+
+/* Custom shimmer delays and sizes (unchanged) */
+.shimmer-effect span:nth-child(1) { left: 10%; top: 20%; width: 3px; height: 3px; animation-delay: 0s; animation-duration: 8s; }
+.shimmer-effect span:nth-child(2) { left: 30%; top: 50%; width: 4px; height: 4px; animation-delay: 1s; animation-duration: 9s; }
+.shimmer-effect span:nth-child(3) { left: 70%; top: 30%; width: 2px; height: 2px; animation-delay: 2s; animation-duration: 7s; }
+.shimmer-effect span:nth-child(4) { left: 50%; top: 80%; width: 5px; height: 5px; animation-delay: 0.5s; animation-duration: 10s; }
+.shimmer-effect span:nth-child(5) { left: 85%; top: 10%; width: 3px; height: 3px; animation-delay: 3s; animation-duration: 6s; }
+.shimmer-effect span:nth-child(6) { left: 15%; top: 70%; width: 4px; height: 4px; animation-delay: 1.5s; animation-duration: 11s; }
+.shimmer-effect span:nth-child(7) { left: 60%; top: 60%; width: 2px; height: 2px; animation-delay: 2.5s; animation-duration: 8.5s; }
+.shimmer-effect span:nth-child(8) { left: 25%; top: 5%; width: 5px; height: 5px; animation-delay: 0.8s; animation-duration: 9.5s; }
+.shimmer-effect span:nth-child(9) { left: 90%; top: 75%; width: 3px; height: 3px; animation-delay: 4s; animation-duration: 7.5s; }
+.shimmer-effect span:nth-child(10) { left: 40%; top: 15%; width: 4px; height: 4px; animation-delay: 1.2s; animation-duration: 10.5s; }
+
+
+/* --- HEART RAIN ANIMATION (CLASSIC RED) --- */
+.heart-rain-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  top: -10vh;
+  /* A classic, deep red for the hearts */
+  color: #e5383b;
+  font-size: 2rem;
+  opacity: 0.8;
+  animation: fall 10s linear infinite;
+}
+
+/* --- Login Form Styles --- */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2.5rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 215, 0, 0.2); /* Faint gold border */
+  animation: fadeIn 2s ease-in-out;
+  z-index: 2;
+}
+
+.login-prompt {
+  /* Use the elegant serif font for titles */
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #F5E9D3; /* Creamy white */
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.name-input {
+  width: 300px;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-family: 'Lora', serif;
+  color: #f5e9d3;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.name-input::placeholder {
+  color: rgba(245, 233, 211, 0.5);
+}
+
+.name-input:focus {
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* A soft golden glow on focus */
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.submit-button {
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Lora', serif;
+  color: #2B0516; /* Dark wine-red text */
+  background-color: rgba(255, 215, 0, 0.85); /* Gold button */
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: rgba(255, 215, 0, 1); /* Brighter gold on hover */
+  transform: scale(1.05);
+}
+
+.error-message {
+  margin-top: 1rem;
+  color: #ff8c8c; /* Softer red for error */
+  font-weight: bold;
+  animation: fadeIn 0.5s ease;
+}
+
+/* --- MINI-GAME STYLES --- */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2.5rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  animation: fadeIn 1.5s ease-in-out;
+  width: 90%;
+  max-width: 600px;
+  z-index: 2;
+}
+
+.question-text {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 2.2rem;
+  color: #F5E9D3;
+  margin-bottom: 2rem;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.option-button-container {
+  position: relative;
+}
+
+.option-button {
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+  font-family: 'Lora', serif;
+  font-weight: bold;
+  color: #F5E9D3; /* Creamy text color */
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.option-button:hover:not(:disabled) {
+  background-color: rgba(255, 215, 0, 0.1);
+  transform: scale(1.05);
+}
+
+.option-button.faded {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.9);
+}
+
+/* --- FINAL MESSAGE STYLES --- */
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  font-weight: 600;
+  color: #ffd700; /* Bright Gold */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  animation: fadeIn 2s ease-in-out;
+  z-index: 2;
+}
+
+.poem {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  max-width: 600px;
+  font-style: italic;
+  color: #F5E9D3;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  animation: fadeIn 3s ease-in-out;
+  z-index: 2;
+}
+
+.feedback-message {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  height: 25px;
+}
+
+.feedback-message.correct {
+  color: #a7ff83;
+}
+
+.final-message {
+  animation: fadeInMessage 2s ease;
+}
+
+/* --- HEART BURST (CLASSIC RED) --- */
+.heart-burst {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #e5383b; /* Classic red */
+  font-size: 2rem;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  animation: burst 1s ease-out forwards;
+}
+
+/* --- Keyframe Animations (Unchanged) --- */
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes shimmer {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1); opacity: 0.7; }
+  100% { transform: scale(0); opacity: 0; }
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInMessage {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes burst {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -150px) scale(2.5);
+  }
+}
+/* --- MEMORY ALBUM STYLES --- */
+.album-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes nav to bottom */
+  height: 90vh; /* Taller to fit image and text */
+  max-height: 700px;
+  width: 90%;
+  max-width: 650px;
+  animation: fadeIn 1.5s ease-in-out;
+  padding: 1.5rem 2rem;
+  /* Keeping the same glass effect as the game container */
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.album-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.album-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #F5E9D3;
+  margin-bottom: 1rem;
+}
+
+.album-image {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s ease; /* Animation for image transition */
+}
+
+.memory-prompt {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-top: 1rem;
+  color: #f5e9d3;
+}
+
+.memory-textarea {
+  width: 100%;
+  height: 80px;
+  margin-top: 0.5rem;
+  padding: 10px;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  color: #f5e9d3;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  border-radius: 10px;
+  resize: none; /* Prevents user from resizing it */
+}
+
+.memory-textarea:focus {
+  outline: none;
+  border-color: rgba(255, 215, 0, 0.8);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.album-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.nav-button {
+  padding: 10px 25px;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2B0516;
+  background-color: rgba(255, 215, 0, 0.85);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover:not(:disabled) {
+  background-color: rgba(255, 215, 0, 1);
+  transform: scale(1.05);
+}
+
+.nav-button:disabled {
+  background-color: rgba(255, 215, 0, 0.3);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.nav-button.finish-button {
+    background-color: #28a745; /* A nice green for finish */
+    color: white;
+}
+
+.nav-button.finish-button:hover {
+    background-color: #218838;
+}
+
+.progress-indicator {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #F5E9D3;
+}
