@@ -29,7 +29,7 @@ const memoriesData = [
   {
     id: 4,
     imageUrl: '/love2.jpg',
-    prompt: "This was such a fun trip! What was your favorite moment?"
+    prompt: "tell me about his image."
   },  
 ];
 // ========================================================================
