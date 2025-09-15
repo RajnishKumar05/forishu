@@ -54,7 +54,7 @@ const HeartRain = () => {
 };
 
 const quizData = [
-  { question: "Which of your adorable traits makes my heart flutter?", options: ["Your humor", "Your cute chubby face", "Your singing", "Your fashion"], correctAnswer: "Your cute cubby face" },
+  { question: "Which of your adorable traits makes my heart flutter?", options: ["Your humor", "Your cute chubby face", "Your singing", "Your fashion"], correctAnswer: "Your cute chubby face" },
   { question: "What quality of yours do I find the most beautiful?", options: ["Your kindness", "Your intelligence", "Your beautiful innocence", "Your confidence"], correctAnswer: "Your beautiful innocence" },
   { question: "Besides your heart, what am I completely in love with?", options: ["Your voice", "Your hands", "Your amazing body shape", "Your hair"], correctAnswer: "Your amazing body shape" },
   { question: "What final sweet quality makes you perfect to me?", options: ["Your politeness", "Your ambition", "Your laugh", "Your taste in movies"], correctAnswer: "Your politeness" },
